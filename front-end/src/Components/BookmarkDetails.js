@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
 import axios from "axios";
+import Reviews from "./Reviews";
 
 const API = process.env.REACT_APP_API_URL;
 function BookmarkDetails() {
@@ -22,6 +23,7 @@ function BookmarkDetails() {
   }, [id]);
 
   const handleDelete = () => {
+    // console.log("I clicked delete");
     deleteBookmark();
   };
 
@@ -63,6 +65,7 @@ function BookmarkDetails() {
           <button onClick={handleDelete}>Delete</button>
         </div>
       </div>
+      <Reviews />
     </article>
   );
 }
