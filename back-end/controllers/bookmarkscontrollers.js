@@ -1,3 +1,4 @@
+// Dependencies
 const express = require("express");
 const bookmarks = express.Router();
 const {
@@ -7,7 +8,8 @@ const {
   deleteBookmark,
   updateBookmark,
 } = require("../queries/bookmarks.js");
-const {validateURL} = require("../validations/validations.js")
+
+const {validateURL} = require("../validations/validateURL.js")
 
 // index
 bookmarks.get("/", async (req, res) => {
